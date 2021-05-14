@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shodan.RomanDates.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController">
+            <summary>
+            Hello World controller
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController.#ctor(Microsoft.Extensions.Logging.ILogger{Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController"/> class.
+            </summary>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:Shodan.RomanDates.Api.Features.RomanDates.Controllers.HelloWorldController.Get">
+            <summary>
+            Gets a instance of Hello World.
+            </summary>
+            <returns>Hello World</returns>
+        </member>
+    </members>
+</doc>
