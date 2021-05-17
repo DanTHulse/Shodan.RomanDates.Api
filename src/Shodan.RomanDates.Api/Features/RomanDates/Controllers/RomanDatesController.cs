@@ -10,7 +10,7 @@ using Shodan.RomanDates.Api.Features.RomanDates.ViewModels;
 namespace Shodan.RomanDates.Api.Features.RomanDates.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("roman")]
     public class RomanDatesController : ControllerBase
     {
         private readonly ILogger<RomanDatesController> _logger;
@@ -22,10 +22,10 @@ namespace Shodan.RomanDates.Api.Features.RomanDates.Controllers
             this._romanDatesService = romanDatesService;
         }
 
-        [HttpGet("")]
+        [HttpGet("date")]
         [ProducesResponseType(typeof(RomanDatesViewModel), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Exception), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<RomanDatesViewModel>> GetRomanDate([FromQuery] RomanDatesRequestModel model)
+        public async Task<ActionResult<RomanDatesViewModel>> GetRomanDate([FromQuery] GetRomanDateRequestModel model)
         {
             try
             {

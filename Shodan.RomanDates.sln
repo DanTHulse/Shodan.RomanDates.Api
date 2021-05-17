@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shodan.RomanDates.Api.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{515CF601-ABB1-408C-8225-4981C624CCE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shodan.RomanDates.Common", "src\Shodan.RomanDates.Common\Shodan.RomanDates.Common.csproj", "{44C1B0B5-83B0-4155-B917-B799A19ED28E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3C305C5E-CF29-42DD-9732-41CC57925CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C305C5E-CF29-42DD-9732-41CC57925CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C305C5E-CF29-42DD-9732-41CC57925CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C1B0B5-83B0-4155-B917-B799A19ED28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C1B0B5-83B0-4155-B917-B799A19ED28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C1B0B5-83B0-4155-B917-B799A19ED28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C1B0B5-83B0-4155-B917-B799A19ED28E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C9B8B61F-BC92-430E-AC0D-3492548A5D3F} = {515CF601-ABB1-408C-8225-4981C624CCE2}
 		{3C305C5E-CF29-42DD-9732-41CC57925CF8} = {EE5946F6-9E7E-4696-989C-71294B6BAAF0}
+		{44C1B0B5-83B0-4155-B917-B799A19ED28E} = {515CF601-ABB1-408C-8225-4981C624CCE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80DE789F-C867-419C-AFEF-8279C2DDCF4D}

@@ -7,6 +7,6 @@ namespace Shodan.RomanDates.Api.Features.RomanDates.Services.Interfaces
 {
     public interface IRomanDatesService : ITransient
     {
-        Task<RomanDatesViewModel> GetRomanDate(RomanDatesRequestModel model);
+        Task<RomanDatesViewModel> GetRomanDate(GetRomanDateRequestModel model);
     }
 }

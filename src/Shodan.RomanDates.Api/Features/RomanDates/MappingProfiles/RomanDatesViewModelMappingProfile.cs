@@ -8,7 +8,7 @@ namespace Shodan.RomanDates.Api.Features.RomanDates.MappingProfiles
     {
         public RomanDatesViewModelMappingProfile()
         {
-            _ = this.CreateMap<RomanDatesRequestModel, RomanDatesViewModel>()
+            _ = this.CreateMap<GetRomanDateRequestModel, RomanDatesViewModel>()
                 .ReverseMap();
         }
     }

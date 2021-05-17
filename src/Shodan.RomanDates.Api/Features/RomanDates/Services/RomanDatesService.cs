@@ -18,7 +18,7 @@ namespace Shodan.RomanDates.Api.Features.RomanDates.Services
             this._helloWorldRepository = helloWorldRepository;
         }
 
-        public async Task<RomanDatesViewModel> GetRomanDate(RomanDatesRequestModel model)
+        public async Task<RomanDatesViewModel> GetRomanDate(GetRomanDateRequestModel model)
             => await this._helloWorldRepository.GetRomanDate(model);
     }
 }

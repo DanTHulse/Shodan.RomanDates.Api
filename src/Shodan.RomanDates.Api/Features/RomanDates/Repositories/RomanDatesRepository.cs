@@ -18,7 +18,7 @@ namespace Shodan.RomanDates.Api.Features.RomanDates.Repositories
             this._mapper = mapper;
         }
 
-        public async Task<RomanDatesViewModel> GetRomanDate(RomanDatesRequestModel model)
+        public async Task<RomanDatesViewModel> GetRomanDate(GetRomanDateRequestModel model)
             => await Task.Run(() => this._mapper.Map<RomanDatesViewModel>(model));
     }
 }

@@ -24,12 +24,12 @@ namespace Shodan.RomanDates.Api.Tests.Features.RomanDates
         [TestMethod]
         public async Task HelloWorld_CalledOnce()
         {
-            _ = this._mockRomanDatesRepository.Setup(s => s.GetRomanDate(It.IsAny<RomanDatesRequestModel>()))
+            _ = this._mockRomanDatesRepository.Setup(s => s.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()))
                 .ReturnsAsync(MockRomanDatesViewModel.GetData);
 
-            _ = await this._sut.GetRomanDate(It.IsAny<RomanDatesRequestModel>());
+            _ = await this._sut.GetRomanDate(It.IsAny<GetRomanDateRequestModel>());
 
-            this._mockRomanDatesRepository.Verify(v => v.GetRomanDate(It.IsAny<RomanDatesRequestModel>()), Times.Once);
+            this._mockRomanDatesRepository.Verify(v => v.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()), Times.Once);
         }
     }
 }

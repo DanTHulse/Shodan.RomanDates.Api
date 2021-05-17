@@ -28,12 +28,12 @@ namespace Shodan.RomanDates.Api.Tests.Features.RomanDates
         [TestMethod]
         public async Task HelloWorld_OnSuccess_ReturnsOk()
         {
-            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<RomanDatesRequestModel>()))
+            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()))
                 .ReturnsAsync(MockRomanDatesViewModel.GetData);
 
-            var result = await this._sut.GetRomanDate(new RomanDatesRequestModel());
+            var result = await this._sut.GetRomanDate(new GetRomanDateRequestModel());
 
-            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<RomanDatesRequestModel>()), Times.Once);
+            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()), Times.Once);
 
             Assert.IsInstanceOfType(result.Result, typeof(OkObjectResult));
         }
@@ -41,12 +41,12 @@ namespace Shodan.RomanDates.Api.Tests.Features.RomanDates
         [TestMethod]
         public async Task HelloWorld_OnValidationFailure_ReturnsBadRequest()
         {
-            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<RomanDatesRequestModel>()))
+            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()))
                 .ReturnsAsync(MockRomanDatesViewModel.GetData);
 
-            var result = await this._sut.GetRomanDate(new RomanDatesRequestModel());
+            var result = await this._sut.GetRomanDate(new GetRomanDateRequestModel());
 
-            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<RomanDatesRequestModel>()), Times.Never);
+            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()), Times.Never);
 
             Assert.IsInstanceOfType(result.Result, typeof(BadRequestObjectResult));
         }
@@ -54,12 +54,12 @@ namespace Shodan.RomanDates.Api.Tests.Features.RomanDates
         [TestMethod]
         public async Task HelloWorld_OnException_ReturnsInternalServerError()
         {
-            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<RomanDatesRequestModel>()))
+            _ = this._mockRomanDatesService.Setup(s => s.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()))
                 .ThrowsAsync(new Exception());
 
-            var result = await this._sut.GetRomanDate(It.IsAny<RomanDatesRequestModel>());
+            var result = await this._sut.GetRomanDate(It.IsAny<GetRomanDateRequestModel>());
 
-            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<RomanDatesRequestModel>()), Times.Never);
+            this._mockRomanDatesService.Verify(v => v.GetRomanDate(It.IsAny<GetRomanDateRequestModel>()), Times.Never);
 
             Assert.IsInstanceOfType(result.Result, typeof(ObjectResult));
         }

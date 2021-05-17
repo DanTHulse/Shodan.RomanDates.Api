@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Shodan.RomanDates.Api.Dto.Configurations;
+using Shodan.RomanDates.Api.Dto.Models;
 
 namespace Shodan.RomanDates.Api.Dto
 {
@@ -13,8 +15,11 @@ namespace Shodan.RomanDates.Api.Dto
         {
         }
 
+        public virtual DbSet<RomanMonth> RomanMonths { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            _ = modelBuilder.ApplyConfiguration(new RomanMonthConfiguration());
         }
     }
 }
